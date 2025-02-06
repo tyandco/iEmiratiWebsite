@@ -18,6 +18,12 @@
     font-weight: 700;
     font-style: normal;
 }
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('fonts/SF-Pro-Display-Heavy.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
 
 html, body {
     height: 100%;
@@ -26,6 +32,7 @@ html, body {
     font-family: 'SF Pro Display', 'Arial', sans-serif;
     background-color: #835426;
     text-align: center;
+ /* Ensure scrolling is enabled */
 }
 
 body {
@@ -43,6 +50,9 @@ body {
     font-family: 'SF Pro Display', 'Arial', sans-serif;
     position: relative; /* Ensure the container is positioned relative to the parent */
     z-index: 2; 
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
     align-items: center;/* Ensure the container is above the background image */
 }
 .vstack {
@@ -54,8 +64,9 @@ body {
     position: center; /* Ensure the container is positioned relative to the parent */
     z-index: 2; /* Ensure the container is above the background image */
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Add gap between items *//* Center children horizontally */
 }
 .hstack {
     width: auto;
@@ -66,8 +77,10 @@ body {
     position: center; /* Ensure the container is positioned relative to the parent */
     z-index: 2; /* Ensure the container is above the background image */
     display: flex;
-    flex-direction: row; /* Stack children horizontally */
-    align-items: center; /* Center children horizontally */
+    flex-direction: row;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Center children horizontally */
 }
 h1 {
     color: #333;
@@ -89,6 +102,13 @@ p {
     margin-bottom: 20px;
     font-family: 'SF Pro Display', 'Arial', sans-serif;
     font-weight: 400; /* Use regular weight */
+}
+h3 {
+    color: #333;
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'SF Pro Display', 'Arial', sans-serif;
+    font-weight: 900; /* Use bold weight */
 }
 
 .button {
@@ -113,7 +133,7 @@ p {
     width: 300px;
     height: 300px;
     background-color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     display: inline-block;
     background-image: url('images/iEmirati\ Icon\ 1.png'); /* Replace with your image path */
     background-size: cover;
