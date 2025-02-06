@@ -42,9 +42,33 @@ body {
     border-radius: 25pt;
     font-family: 'SF Pro Display', 'Arial', sans-serif;
     position: relative; /* Ensure the container is positioned relative to the parent */
-    z-index: 2; /* Ensure the container is above the background image */
+    z-index: 2; 
+    align-items: center;/* Ensure the container is above the background image */
 }
-
+.vstack {
+    width: 100%;
+    padding: 30pt;
+    background-color: #ffffff00;
+    border-radius: 25pt;
+    font-family: 'SF Pro Display', 'Arial', sans-serif;
+    position: center; /* Ensure the container is positioned relative to the parent */
+    z-index: 2; /* Ensure the container is above the background image */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+.hstack {
+    width: auto;
+    padding: auto;
+    background-color: #ffffff00;
+    border-radius: 25pt;
+    font-family: 'SF Pro Display', 'Arial', sans-serif;
+    position: center; /* Ensure the container is positioned relative to the parent */
+    z-index: 2; /* Ensure the container is above the background image */
+    display: flex;
+    flex-direction: row; /* Stack children horizontally */
+    align-items: center; /* Center children horizontally */
+}
 h1 {
     color: #333;
     font-size: 2.5em;
@@ -52,7 +76,13 @@ h1 {
     font-family: 'SF Pro Display', 'Arial', sans-serif;
     font-weight: 700; /* Use bold weight */
 }
-
+h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'SF Pro Display', 'Arial', sans-serif;
+    font-weight: 500; /* Use bold weight */
+}
 p {
     color: #666;
     font-size: 1.2em;
@@ -88,6 +118,14 @@ p {
     background-image: url('images/iEmirati\ Icon\ 1.png'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
+}
+.pfp-placeholder {
+    width: 125pt;
+    height: 125pt;
+    background-size: contain; /* Change to contain to ensure the entire image is visible */
+    background-position: center;
+    border-radius: 100%;
+    background-repeat: no-repeat; /* Ensure the image does not repeat */
 }
 
 nav {
