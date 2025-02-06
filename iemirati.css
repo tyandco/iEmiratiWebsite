@@ -174,11 +174,13 @@ nav ul li a {
     color: #d3d3d3;
     text-align: middle center;
     padding: 16pt;
+    font-weight: 500;
     text-decoration: none;
 }
 
 nav ul li a:hover {
     color: #ffffff;
+    font-weight: 700;
 }
 
 .top-bar {
