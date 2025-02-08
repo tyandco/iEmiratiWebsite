@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iEmirati</title>
-    <link rel="stylesheet" href="iemirati.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | iEmirati</title>
+    <link rel="stylesheet" href="iemirati.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <div class="background-image"></div>
     <nav>
         <ul>
-            <li><a href="index.html"><img src="images/iEmirati Icon 1.png" alt="iEmirati Logo" class="top-bar" class="icon"> iEmirati</a></li>
+            <li><a href="index.html">
+                <img src="images/iEmiratiIcon1.png" alt="iEmirati Logo" class="top-bar light-icon" />
+                <img src="images/iEmiratiIcon1-dark.png" alt="iEmirati Logo" class="top-bar dark-icon" />
+                iEmirati
+              </a>
+            </li>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="credits.html">Credits</a></li>
+            <!-- Dark Mode Toggle in Nav -->
+            <li class="toggle-container">
+                <input type="checkbox" id="theme-toggle" hidden />
+                <label for="theme-toggle" class="theme-toggle">
+                  <img src="images/sun.svg" class="icon sun" alt="Light mode" />
+                  <img src="images/moon.svg" class="icon moon" alt="Dark mode" />
+                </label>
+              </li>
         </ul>
     </nav>
-    <div class="content-wrapper">
-        <div class="background-image"></div>
+    <main class="main-content">
         <div class="container">
-            <h3>This section is incomplete. Come back soon.</h3>
+            <h3>About</h3>
+            <p>This section is incomplete. Come back soon.</p>
         </div>
-    </div>
+    </main>
+    <script src="toggle.js"></script>
 </body>
 </html>

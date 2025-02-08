@@ -3,46 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iEmirati</title>
+    <title>Credits | iEmirati</title>
     <link rel="stylesheet" href="iemirati.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <div class="background-image"></div>
     <nav>
         <ul>
-            <li><a href="index.html"><img src="images/iEmirati Icon 1.png" alt="iEmirati Logo" class="top-bar" class="icon"> iEmirati</a></li>
+            <li><a href="index.html">
+                <img src="images/iEmiratiIcon1.png" alt="iEmirati Logo" class="top-bar light-icon" />
+                <img src="images/iEmiratiIcon1-dark.png" alt="iEmirati Logo" class="top-bar dark-icon" />
+                iEmirati
+              </a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="credits.html">Credits</a></li>
+            <li class="toggle-container">
+                <input type="checkbox" id="theme-toggle" hidden />
+                <label for="theme-toggle" class="theme-toggle">
+                  <img src="images/sun.svg" class="icon sun" alt="Light mode" />
+                  <img src="images/moon.svg" class="icon moon" alt="Dark mode" />
+                </label>
+              </li>
         </ul>
     </nav>
-
-    <div class="content-wrapper">
-        <div class="background-image"></div>
+    <main class="main-content credits-page">
         <div class="container">
             <div class="vstack">
-                <br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br><br>
-                <br>
-                <h1>Credits</h1>
-                <br>
-                <br>
-                <br>
+                <h4>Credits</h4>
+                <div style="height: 60pt;"></div>
                 <h1>App Dev:</h1>
                 <div class="hstack">
                     <img src="https://github.com/tyandco.png" alt="tyandco pfp" class="pfp-placeholder">
@@ -50,29 +41,33 @@
                         <h2>Yousef Alkhemeiri</h2>
                         <p>also known as tyandco on GitHub</p>
                     </div>
-            </div>
-            <h1>Teammates/Contributors:</h1>
-            <div class="hstack">
-                <div class="vstack">
-                    <h2>Mayed Alkaabi</h2>
-                    <p>also known as MayDreemurr on GitHub</p>
                 </div>
-                <img src="https://github.com/MayDreemurr.png" alt="MayDreemurr pfp" class="pfp-placeholder">
-        </div>
-        <div class="hstack">
-            <img src="https://github.com/S3eedMV1.png" alt="S3eedMV1 pfp" class="pfp-placeholder">
-            <div class="vstack">
-                <h2>Saeed Yasser</h2>
-                <p>also known as S3eedMV1 on GitHub</p>
+                <div style="height: 30pt;"></div>
+                <h1>Teammates/Contributors:</h1>
+                <div class="hstack">
+                    <div class="vstack">
+                        <h2>Mayed Alkaabi</h2>
+                        <p>also known as MayDreemurr on GitHub</p>
+                    </div>
+                    <img src="https://github.com/MayDreemurr.png" alt="MayDreemurr pfp" class="pfp-placeholder">
+                </div>
+                <div class="hstack">
+                    <img src="https://github.com/S3eedMV1.png" alt="S3eedMV1 pfp" class="pfp-placeholder">
+                    <div class="vstack">
+                        <h2>Saeed Yasser</h2>
+                        <p>also known as S3eedMV1 on GitHub</p>
+                    </div>
+                </div>
+                <div class="hstack">
+                    <div class="vstack">
+                        <h2>Khamis Matter</h2>
+                        <p>also known as khamisalali on GitHub</p>
+                    </div>
+                    <img src="https://github.com/khamisalali.png" alt="khamisalali pfp" class="pfp-placeholder">
+                </div>
             </div>
         </div>
-        <div class="hstack">
-            <div class="vstack">
-                <h2>Khamis Matter</h2>
-                <p>also known as khamisalali on GitHub</p>
-            </div>
-            <img src="https://github.com/khamisalali.png" alt="khamisalali pfp" class="pfp-placeholder">
-        </div>
-    </div>
+    </main>
+    <script src="toggle.js"></script>
 </body>
 </html>
