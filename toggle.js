@@ -1,22 +1,21 @@
 // toggle.js
 
 document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("theme-toggle");
 
-  // Check localStorage for dark mode preference
-  const darkModeSetting = localStorage.getItem("darkMode");
-  if (darkModeSetting === "enabled") {
-    document.documentElement.classList.add("dark-mode");
-    toggle.checked = true;
-  }
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-  toggle.addEventListener("change", function () {
-    if (toggle.checked) {
+  // Function to update theme based on system preference
+  function updateTheme(e) {
+    if (e.matches) {
       document.documentElement.classList.add("dark-mode");
-      localStorage.setItem("darkMode", "enabled");
     } else {
       document.documentElement.classList.remove("dark-mode");
-      localStorage.setItem("darkMode", "disabled");
     }
-  });
+  }
+
+  // Initial check
+  updateTheme(mediaQuery);
+
+  // Listen for changes to system preference
+  mediaQuery.addEventListener("change", updateTheme);
 });
