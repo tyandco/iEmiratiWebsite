@@ -202,13 +202,13 @@ nav ul li a:hover {
 
 /* Dark mode styles activated by the "dark-mode" class */
 .dark-mode {
-  --body-bg: #1359A4;
+  --body-bg: #222;
   --text-color: #fff;
-  --container-bg: #132a42;
+  --container-bg: #444;
   --container-text: #fff;
   --nav-txt-unhover: #d3d3d3;
   --secondary-txt: #dcdcdc97;
-  --button-bg: #e2e2e24d;
+  --button-bg: #c2b2801f;
 }
 
 .dark-mode html,
