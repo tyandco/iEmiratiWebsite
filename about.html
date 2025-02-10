@@ -1,35 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | iEmirati</title>
-    <link rel="stylesheet" href="iemirati.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | iEmirati</title>
+    <link rel="stylesheet" href="main.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <div class="background-image"></div>
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">
+    
+    <!-- Desktop Navigation (visible on desktop only) -->
+    <nav class="desktop-nav">
+        <div class="desktop-nav-container" style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px; padding-left:0;">
+            <!-- Left: Logo with text (flush left) -->
+            <div class="nav-left" style="margin-left:0;">
+                <a href="index.html" class="logo">
                     <img src="images/iEmiratiIcon1.png" alt="iEmirati Logo" class="top-bar light-icon" />
                     <img src="images/iEmiratiIcon1-dark.png" alt="iEmirati Logo" class="top-bar dark-icon" />
-                    iEmirati
+                    <span class="logo-text">iEmirati</span>
                 </a>
-            </li>
+            </div>
+            <!-- Center: Navigation Links -->
+            <div class="nav-center">
+                <ul class="desktop-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="credits.html">Credits</a></li>
+                </ul>
+            </div>
+            <!-- Right: Dark/Light Toggle -->
+            <div class="nav-right">
+                <input type="checkbox" id="theme-toggle" hidden>
+                <label for="theme-toggle" class="theme-toggle">
+                    <img src="images/sun.png" class="icon sun" alt="Light mode">
+                    <img src="images/moon.png" class="icon dark-icon" alt="Dark mode">
+                </label>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation (visible on mobile only) -->
+    <nav class="mobile-nav">
+        <!-- Left: Logo (logo text hidden on mobile via CSS) -->
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <img src="images/iEmiratiIcon1.png" alt="iEmirati Logo" class="top-bar light-icon" />
+                <img src="images/iEmiratiIcon1-dark.png" alt="iEmirati Logo" class="top-bar dark-icon" />
+            </a>
+        </div>
+        <!-- Right: Mode Toggle and Hamburger Button -->
+        <div class="nav-right">
+            <input type="checkbox" id="theme-toggle-mobile" hidden>
+            <label for="theme-toggle-mobile" class="theme-toggle">
+                <img src="images/sun.png" class="icon sun" alt="Light mode">
+                <img src="images/moon.png" class="icon dark-icon" alt="Dark mode">
+            </label>
+            <button id="nav-toggle" class="hamburger">☰</button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Slide-Down Navigation (visible on mobile only) -->
+    <div id="slide-nav" class="slide-nav">
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="credits.html">Credits</a></li>
         </ul>
-    </nav>
+    </div>
+    
+    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
             <h3>About</h3>
             <p>This section is incomplete. Come back soon.</p>
         </div>
     </main>
+    
+    <script src="nav-toggle.js"></script>
     <script src="toggle.js"></script>
 </body>
 </html>

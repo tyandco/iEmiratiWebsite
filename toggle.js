@@ -1,21 +1,14 @@
-// toggle.js
+document.addEventListener('DOMContentLoaded', () => {
+  const setTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+  };
 
-document.addEventListener("DOMContentLoaded", function () {
+  // Set initial theme based on system preference
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(prefersDark ? 'dark' : 'light');
 
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-  // Function to update theme based on system preference
-  function updateTheme(e) {
-    if (e.matches) {
-      document.documentElement.classList.add("dark-mode");
-    } else {
-      document.documentElement.classList.remove("dark-mode");
-    }
-  }
-
-  // Initial check
-  updateTheme(mediaQuery);
-
-  // Listen for changes to system preference
-  mediaQuery.addEventListener("change", updateTheme);
+  // Listen for changes in system preferences and update theme accordingly
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    setTheme(e.matches ? 'dark' : 'light');
+  });
 });
