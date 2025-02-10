@@ -41,20 +41,20 @@
 /* Light Mode Variables (Default) */
 :root {
   --body-bg: #835426;
-  --text-color: #000;
-  --container-bg: #fff;
+  --text-color: #000000;
+  --container-bg: #ffffff;
   --nav-txt-unhover: #404040;
-  --container-text: #000;
+  --container-text: #000000;
   --secondary-txt: #575757ad;
   --button-bg: #c2b2801f;
   --button-hover: #7d6d3e2f;
 }
 
 [data-theme="dark"] {
-  --body-bg: #222;
-  --text-color: #fff;
-  --container-bg: #444;
-  --container-text: #fff;
+  --body-bg: #222222;
+  --text-color: #ffffff;
+  --container-bg: #444444;
+  --container-text: #ffffff;
   --nav-txt-unhover: #d3d3d3;
   --secondary-txt: #dcdcdc97;
   --button-bg: #c2b2801f;
@@ -202,10 +202,10 @@ nav ul li a:hover {
 
 /* Dark mode styles activated by the "dark-mode" class */
 .dark-mode {
-  --body-bg: #222;
-  --text-color: #fff;
-  --container-bg: #444;
-  --container-text: #fff;
+  --body-bg: #222222;
+  --text-color: #ffffff;
+  --container-bg: #444444;
+  --container-text: #ffffff;
   --nav-txt-unhover: #d3d3d3;
   --secondary-txt: #dcdcdc97;
   --button-bg: #c2b2801f;
